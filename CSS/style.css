@@ -6,6 +6,19 @@
 .flex{
     display: flex;
 }
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-centered{
+    justify-content: center;
+    align-items: center;
+}
 body{
     background-image: linear-gradient(to bottom,
     #009688 0px,
@@ -15,6 +28,7 @@ body{
     width: 100%;
     height: 100vh;
     display: flex;
+    font-family: "lato", sans-serif;
 }
 div#app{
     width: 80%;
@@ -30,4 +44,61 @@ section.contacts{
 section.messages{
     width: 75%;
     height: 100%;
+}
+header.conversation-contact{
+    height: 60px;
+    padding: .5rem;
+    background-color: #eaeaea;
+}
+img{
+    height: 100%;
+}
+header div.contact-info{
+    height: 100%;
+}
+img.contact-picture{
+    border-radius: 1.5rem;
+}
+header .action-buttons > i{
+    margin-right: .5rem;
+    color: grey;
+}
+div.notifications{
+    height: 60px;
+    padding: .5rem;
+    background-color: #00ccff;
+}
+div.searchbar{
+    height: 40px;
+    padding: .5rem;
+    background-color: #b9c0c2;
+}
+div.contacts-list{
+    height: calc(100% - 170px);
+    background-color: antiquewhite;
+    overflow-y: scroll;
+}
+div.active-conversation{
+    background-image: url(../../img/mine.jpg);
+    height: calc(100% - 130px);
+    padding: 3rem;
+}
+div.message-input{
+    height: 70px;
+    background-color: lightgray;
+}
+article.single-message{
+padding: 1rem;
+width: 40%;
+border-radius: .7rem;
+margin-bottom: 1rem;
+font-size: .85rem;
+}
+article.single-message.sent{
+    background-color: lightgreen;
+    align-self: flex-end;
+}
+article.single-message.recived{
+    background-color: white;
+    align-self: flex-start;
 }
