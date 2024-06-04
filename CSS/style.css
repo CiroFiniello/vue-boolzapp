@@ -102,3 +102,16 @@ article.single-message.recived{
     background-color: white;
     align-self: flex-start;
 }
+div.contact-list img{
+    width: 60px;
+}
+div.list-item{
+    height: 60px;
+    width: 100%;
+    background-color: white;
+}
+.ultimo-messaggio{
+    font-size: .8rem;
+    font-weight: lighter;
+    color: lightgrey;
+}

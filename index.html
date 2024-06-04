@@ -27,7 +27,17 @@
                 </header>
                 <div class="notifications"></div>
                 <div class="searchbar"></div>
-                <div class="contacts-list"></div>
+                <div class="contacts-list">
+                    <div class="list-item flex " v-for="(item, index) in contacts" :key="index">
+                        <img src="../img/avatar_1.jpg" alt="contact pic" class="mkm-contact-picture">
+                        <div class="msg flex-column">
+                            <p class="contact-name">
+                                {{ item.name }}
+                            </p>
+                            <p class="ultimo-messaggio">Ultimo messaggio inviato</p>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="messages">
                 <header class="conversation-contact flex-between">
@@ -42,7 +52,10 @@
                     </div>
                 </header>
                 <div class="active-conversation flex-column">
-                    <article class="single-message sent">Lorem ipsum dolor sit amet consectetur adipisicing elit. In a alias voluptatum ab numquam
+                    <article class="single-message sent" v-for="(contact, index) in contacts" :key="index"> 
+                        <div class="msg" v-for="(message,msgIndex) in contact.messages" :key="msgIndex">
+                            {{ message.message }}
+                        </div>
                     </article>
                     <article class="single-message recived"> adipisicing elit. In a alias voluptatum ab numquam
 
