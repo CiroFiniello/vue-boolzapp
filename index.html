@@ -29,7 +29,7 @@
                 <div class="searchbar"></div>
                 <div class="contacts-list">
                     <div class="list-item flex " v-for="(item, index) in contacts" :key="index"
-                    @click="setActiveContact(item, index) in contacts"
+                    @click="setActiveContact(index)"
                     >
                         <img src="../img/avatar_1.jpg" alt="contact pic" class="mkm-contact-picture">
                         <div class="msg flex-column">

@@ -170,8 +170,9 @@ createApp({
         }
 },
 methods: {
-    setActiveContact: function(){
-        console.log('conversazione')
+    setActiveContact: function(itemIndex){
+        this.activeContact = itemIndex
+        console.log(itemIndex)
     }
 }
 }).mount('#app');
