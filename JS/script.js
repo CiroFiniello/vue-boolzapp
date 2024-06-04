@@ -165,10 +165,13 @@ createApp({
                         }
                     ],
                 }
-            ]
+            ],
+            activeContact : '',
         }
 },
 methods: {
-    
+    setActiveContact: function(){
+        console.log('conversazione')
+    }
 }
 }).mount('#app');
