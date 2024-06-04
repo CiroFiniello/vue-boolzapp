@@ -66,12 +66,12 @@ header .action-buttons > i{
 div.notifications{
     height: 60px;
     padding: .5rem;
-    background-color: #00ccff;
+    background-color: #8edafc;
 }
 div.searchbar{
     height: 40px;
     padding: .5rem;
-    background-color: #b9c0c2;
+    background-color: #e6eaed;
 }
 div.contacts-list{
     height: calc(100% - 170px);
@@ -85,7 +85,7 @@ div.active-conversation{
 }
 div.message-input{
     height: 70px;
-    background-color: lightgray;
+    background-color: #f3eeea;
 }
 article.single-message{
 padding: 1rem;
