@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.flex{
+    display: flex;
+}
+body{
+    background-image: linear-gradient(to bottom,
+    #009688 0px,
+    #009688 15vh,
+    #dddbd1 15vh,
+    #d2dbdc 100%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+div#app{
+    width: 80%;
+    height: 95%;
+    background-color: white;
+    margin: auto;
+}
+section.contacts{
+    width: 25%;
+    height: 100%;
+    border: solid 1px grey;
+}
+section.messages{
+    width: 75%;
+    height: 100%;
+}
