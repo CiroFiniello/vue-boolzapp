@@ -182,6 +182,15 @@ methods: {
         console.log(newMessage)
         this.contacts[this.activeContact].messages.push(newMessage);
         this.newMessage= '';
+        setTimeout(() => {
+            const autoReply = {
+                date: new Date().toLocaleString('it-IT'),
+                message: 'ok',
+                status: 'received'
+            };
+            this.contacts[this.activeContact].messages.push(autoReply);
+            this.newMessage= '';
+        }, 1000);
     },
 }
 }).mount('#app');
