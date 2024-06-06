@@ -166,13 +166,22 @@ createApp({
                     ],
                 }
             ],
-            activeContact : '',
+            activeContact : 0,
         }
 },
 methods: {
     setActiveContact: function(itemIndex){
         this.activeContact = itemIndex
-        console.log(itemIndex)
-    }
+    },
+    getMessage: function(message){
+        const newMessage ={
+                date: new Date().toLocaleString('it-IT'),
+                message: message,
+                status: 'sent',
+        }
+        console.log(newMessage)
+        this.contacts[this.activeContact].messages.push(newMessage);
+        this.newMessage= '';
+    },
 }
 }).mount('#app');
