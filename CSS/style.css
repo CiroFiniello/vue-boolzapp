@@ -79,7 +79,7 @@ div.contacts-list{
     overflow-y: scroll;
 }
 div.active-conversation{
-    background-image: url(../../img/mine.jpg);
+    background-image: url(../img/mine.jpg);
     height: calc(100% - 130px);
     padding: 3rem;
 }
