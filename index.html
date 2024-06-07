@@ -27,6 +27,10 @@
                 </header>
                 <div class="notifications"></div>
                 <div class="searchbar">
+                    <div class="src-input">
+                        <input type="text" class="input" placeholder="Cerca o inizia una nuova chat"
+                        v-model="ricerca">
+                    </div>
                         <!-- mi serve una variabile nello script, che si ricollega a quello che scrivo qui con un v-model
                         in input, e devo verificare nel v-for del list-item , se 
                         ( con ? <= operatore condizionale ternario) il testo della ricerca è contenuto
@@ -34,8 +38,11 @@
                 </div>
                 <div class="contacts-list">
                     <div class="list-item flex " v-for="(item, index) in contacts" :key="index"
-                    @click="setActiveContact(index)" :class="{ active: index === activeContact }"
-                    
+                    @click="setActiveContact(index)" :class="{ active: index === activeContact, hidden: !(item.name.toLowerCase().includes(ricerca.toLowerCase())) }"> 
+
+                        <!-- :class=" message.status != 'sent' ? 'recived' : 'sent' "> 
+                        <!-- Se lo status è diverso da sent imposta la classe recived, 
+                        altrimenti è sent-->
                     >
                         <img src="../img/avatar_1.jpg" alt="contact pic" class="mkm-contact-picture">
                         <div class="msg flex-column">
@@ -73,7 +80,7 @@
                 <div class="message-input flex">
                         <div class="box emoj"></div>
                         <div class="box-input input">
-                            <input type="text" name="user" id="input-id" placeholder="Scrivi un messaggio"
+                            <input type="text" name="user" class="input" placeholder="Scrivi un messaggio"
                             v-model="newMessage"
                             @keyup.enter="getMessage(newMessage)">
                         </div>

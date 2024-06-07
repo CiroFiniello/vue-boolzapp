@@ -125,12 +125,18 @@ div.box-input{
     width: 70% ;
     background-color: white;
     align-items: center;
-    margin: .5rem 0;
+    margin-left: .5rem ;
 }
-#input-id{
+.input{
     width: 100%;
     height: 100%;
     background-color: white;
     border: none;
-    margin-left: .9rem;
+}
+div.src-input{
+    width: 100%;
+    height: 100%;
+}
+.hidden{
+    display: none;
 }

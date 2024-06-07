@@ -167,6 +167,7 @@ createApp({
                 }
             ],
             activeContact : 0,
+            ricerca:'',
         }
 },
 methods: {
